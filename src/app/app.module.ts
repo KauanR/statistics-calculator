@@ -4,7 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 // Componentes internos
 import { AppComponent } from './app.component'
-import { AppHeadComponent } from './head/head.component'
+import { HeadComponent } from './head/head.component'
+import { InfoComponent } from './info/info.component'
+import { FrequencyDistComponent } from './frequency-dist/frequency-dist.component'
+import { CalcsComponent } from './calcs/calcs.component'
 // Imports
 import { MatCardModule } from '@angular/material/card'
 import { MatChipsModule } from '@angular/material/chips'
@@ -17,7 +20,10 @@ import { MatButtonModule } from '@angular/material/button'
 @NgModule({
     declarations: [
         AppComponent,
-        AppHeadComponent
+        HeadComponent,
+        InfoComponent,
+        FrequencyDistComponent,
+        CalcsComponent
     ],
     imports: [
         BrowserModule,

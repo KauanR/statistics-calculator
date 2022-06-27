@@ -1,3 +1,9 @@
 <main>
-    <app-head (confirmEntries)="entries = $event"></app-head>
+    <app-head (confirmEntries)="updateEntries($event)"></app-head>
+
+    <div *ngIf="entries.length !== 0" class="content">
+        <app-info [entries]="entries"></app-info>
+        <app-frequency-dist [entries]="entries"></app-frequency-dist>
+        <app-calcs [entries]="entries"></app-calcs>
+    </div>
 </main>
