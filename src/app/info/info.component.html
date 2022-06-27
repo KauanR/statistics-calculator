@@ -1,0 +1,15 @@
+<div class="title">
+    Valores utilizados
+</div>
+
+<mat-divider></mat-divider>
+
+<table>
+    <tbody>
+        <tr *ngFor="let chunk of entriesChunks">
+            <td *ngFor="let entry of chunk">
+                {{ entry }}
+            </td>
+        </tr>
+    </tbody>
+</table>
