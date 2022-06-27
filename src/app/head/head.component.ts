@@ -40,6 +40,10 @@ export class HeadComponent {
     }
 
     submit(): void {
+        if(this.entriesInput.nativeElement.value)
+            this.addEntry(this.entriesInput.nativeElement.value)
+
+        
         this.confirmEntries.emit(this.entries)
         this.clearEntries()
     }

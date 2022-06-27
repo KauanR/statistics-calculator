@@ -7,7 +7,6 @@ mat-card {
         }
     
         mat-card-title {
-            font-style: oblique;
             color: var(--primary);
             font-size: 30px;
         }
@@ -16,6 +15,11 @@ mat-card {
     mat-card-content {
         display: grid;
         row-gap: 1rem;
+
+        p {
+            text-align: center;
+            margin: 0;
+        }
     
         mat-form-field {
             width: 80%;
