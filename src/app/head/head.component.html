@@ -26,6 +26,7 @@
                     #entriesInput
                     type="number"
                     placeholder="Novo valor..." 
+                    autofocus
                     [matChipInputFor]="chipList"
                     [matChipInputSeparatorKeyCodes]="separators" 
                     (matChipInputTokenEnd)="addEntry($event.value)"

@@ -6,7 +6,7 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes'
     templateUrl: 'head.component.html',
     styleUrls: ['head.component.scss']
 })
-export class AppHeadComponent {
+export class HeadComponent {
 
     @ViewChild('entriesInput') entriesInput: ElementRef
 
@@ -41,6 +41,7 @@ export class AppHeadComponent {
 
     submit(): void {
         this.confirmEntries.emit(this.entries)
+        this.clearEntries()
     }
 
 }
