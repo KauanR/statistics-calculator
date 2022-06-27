@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Calculadora Estatística
+        </mat-card-title>
+        <mat-card-subtitle>
+            Fornece cálculo automático das principais estatística descritivas
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-divider inset></mat-divider>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Valores</mat-label>
+            <mat-chip-list #chipList>
+                <ng-container *ngFor="let entry of entries; let i = index">
+                    <mat-chip selected (removed)="removeEntry(i)">
+                        {{entry}}
+                        <button matChipRemove>
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip>
+                </ng-container>
+                <input 
+                    #entriesInput
+                    type="number"
+                    placeholder="Novo valor..." 
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separators" 
+                    (matChipInputTokenEnd)="addEntry($event.value)"
+                >
+            </mat-chip-list>
+            <mat-hint>Utilize enter ou vírgula para separar os números</mat-hint>
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button mat-button color="accent" (click)="clearEntries()">
+            Limpar valores
+        </button>
+        <button mat-raised-button color="primary" (click)="submit()">
+            Cálcular
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,25 @@
+mat-card {
+    width: 50vw;
+
+    mat-card-header {
+        text-align: center;
+    
+        ::ng-deep .mat-card-header-text {
+            width: 100%;
+        }
+    
+        mat-card-title {
+            font-size: 30px;
+        }
+    }
+    
+    mat-card-content {
+        display: grid;
+        row-gap: 1rem;
+    
+        mat-form-field {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
