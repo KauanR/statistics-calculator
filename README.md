@@ -33,7 +33,7 @@ You will only need [NodeJS](https://nodejs.org/en/download/) and a package manag
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-The usage is pretty straightforward, just enter the numbers (whole or decimal) in the field at the top of the page and click on 'Calcular'. It is also possible to use randomly generated numbers using the 'Generate random numbers' button.
+The usage is pretty straightforward, just enter the numbers (whole or decimal) in the field at the top of the page and click on 'Calcular'. It is also possible to use randomly generated numbers using the 'Gerar números aleatórios' button.
 
 <!-- LICENSE -->
 ## License
