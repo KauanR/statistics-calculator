@@ -14,6 +14,8 @@ export class InfoComponent implements OnInit {
     ngOnInit(): void {
         for(let i = 0; i < this.entries.length; i+= 10)
             this.entriesChunks.push(this.entries.slice(i, i + 10))
+
+        console.log('Números utilizados', this.entries)
     }
 
 }
