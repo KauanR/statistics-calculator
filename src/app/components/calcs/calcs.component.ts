@@ -2,12 +2,6 @@ import { Component, Input, OnChanges } from '@angular/core'
 import * as ss from 'simple-statistics'
 import { Calculations } from './interface/calculations'
 
-const EMPTY_CALCS: Calculations = {
-    avg: '-',
-    geoAvg: '-',
-    median: '-',
-    mode: '-'
-}
 
 @Component({
     selector: 'app-calcs',
@@ -16,19 +10,29 @@ const EMPTY_CALCS: Calculations = {
 })
 export class CalcsComponent implements OnChanges {
 
-    @Input() entries: number[] = []
+    @Input() entries: number[]
 
-    calcs: any = EMPTY_CALCS
+    calcs: Calculations
+
+    constructor() {
+        this.entries = []
+        this.calcs = {} as Calculations
+    }
 
     ngOnChanges(): void {
         this.calcs = {
-            avg: ss.average(this.entries),
-            geoAvg: ss.geometricMean(this.entries),
+            mean: ss.mean(this.entries),
+            geometricMean: ss.geometricMean(this.entries),
+            mode: ss.mode(this.entries),
             median: ss.median(this.entries),
-            mode: ss.mode(this.entries)
+            sampleStandardDeviation: ss.sampleStandardDeviation(this.entries),
+            standardDeviation: ss.standardDeviation(this.entries),
+            sampleVariance: ss.sampleVariance(this.entries),
+            variance: ss.variance(this.entries),
+            coefficientOfVariation: (100 * ss.sampleStandardDeviation(this.entries)) /ss.mean(this.entries)
         }
 
-        console.log(this.calcs)
+        console.log('Estatísticas descritivas', this.calcs)
     }
 
 

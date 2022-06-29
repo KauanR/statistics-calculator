@@ -7,4 +7,35 @@ mat-card {
             color: var(--accent);
         }
     }
+
+    mat-card-content {
+        div.wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1.5rem;
+            width: max-content;
+            margin: 0 auto;
+
+            div.indicator {
+                display: grid;
+                row-gap: .5rem;
+                justify-items: center;
+                justify-content: center;
+
+                h3 {
+                    margin: 0;
+                }
+
+                h4 {
+                    margin: 0;
+                    font-weight: 400;
+                }
+            }
+
+            #coefficientOfVariation {
+                grid-column: span 2;
+            }
+        }
+    }
 }

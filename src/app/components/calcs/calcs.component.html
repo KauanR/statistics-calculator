@@ -6,8 +6,51 @@
     </mat-card-header>
 
     <mat-card-content>
-        <p style="text-align: center; font-style: italic; opacity: .5;">
-            Em breve
-        </p>
+        <div class="wrap">
+            <div class="indicator">
+                <h3> {{ calcs.mean | number : '1.2-2' }} </h3>
+                <h4> Média Aritmética </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.geometricMean | number : '1.2-2' }} </h3>
+                <h4> Média Geométrica </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.mode | number : '1.2-2' }} </h3>
+                <h4> Moda </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.median | number : '1.2-2' }} </h3>
+                <h4> Mediana </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.sampleStandardDeviation | number : '1.2-2' }} </h3>
+                <h4> Desvio Padrão Amostral </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.standardDeviation | number : '1.2-2' }} </h3>
+                <h4> Desvio Padrão Populacional </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.sampleVariance | number : '1.2-2' }} </h3>
+                <h4> Variância Amostral </h4>
+            </div>
+
+            <div class="indicator">
+                <h3> {{ calcs.variance | number : '1.2-2' }} </h3>
+                <h4> Variância Populacional </h4>
+            </div>
+
+            <div id="coefficientOfVariation" class="indicator">
+                <h3> {{ calcs.coefficientOfVariation | number : '1.2-2' }} </h3>
+                <h4> Coeficiente de Variação Amostral </h4>
+            </div>
+        </div>
     </mat-card-content>
 </mat-card>
