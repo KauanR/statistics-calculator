@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 // Componentes internos
 import { AppComponent } from './app.component'
 import { HeadComponent } from './components/head/head.component'
+import { HeadRandomComponent } from './components/head/head-random/head-random.component'
 import { InfoComponent } from './components/info/info.component'
 import { FrequencyDistComponent } from './components/frequency-dist/frequency-dist.component'
 import { CalcsComponent } from './components/calcs/calcs.component'
@@ -16,11 +17,13 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
 import { MatDividerModule } from '@angular/material/divider'
 import { MatButtonModule } from '@angular/material/button'
+import { MatDialogModule } from '@angular/material/dialog'
 
 @NgModule({
     declarations: [
         AppComponent,
         HeadComponent,
+        HeadRandomComponent,
         InfoComponent,
         FrequencyDistComponent,
         CalcsComponent
@@ -37,7 +40,8 @@ import { MatButtonModule } from '@angular/material/button'
         MatFormFieldModule,
         MatIconModule,
         MatDividerModule,
-        MatButtonModule
+        MatButtonModule,
+        MatDialogModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -4,7 +4,7 @@
             Calculadora Estatística
         </mat-card-title>
         <mat-card-subtitle>
-            Fornece cálculo automático das principais estatística descritivas e distribuição de frequências. Além de gráficos adicionais.
+            Fornece cálculo automático das principais estatística descritivas e distribuição de frequências, além de gráficos adicionais.
         </mat-card-subtitle>
     </mat-card-header>
 
@@ -14,7 +14,7 @@
         <p>Para começar insira os números desejados no campo abaixo e confirme a operação</p>
 
         <mat-form-field appearance="outline">
-            <mat-label>Valores</mat-label>
+            <mat-label>Números</mat-label>
             <mat-chip-list #chipList>
                 <ng-container *ngFor="let entry of entries; let i = index">
                     <mat-chip selected (removed)="removeEntry(i)">
@@ -39,11 +39,15 @@
     </mat-card-content>
 
     <mat-card-actions align="end">
-        <button mat-button color="accent" (click)="clearEntries()">
-            Limpar valores
+        <button mat-button color="accent" (click)="dialog.open(random)">
+            Gerar números aleatórios
         </button>
         <button mat-raised-button color="primary" (click)="submit()">
             Cálcular
         </button>
     </mat-card-actions>
 </mat-card>
+
+<ng-template #random>
+    <app-head-random (generate)="submit($event)"></app-head-random>
+</ng-template>
