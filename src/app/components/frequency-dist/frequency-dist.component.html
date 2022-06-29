@@ -6,8 +6,42 @@
     </mat-card-header>
 
     <mat-card-content>
-        <p style="text-align: center; font-style: italic; opacity: .5;">
-            Em breve
-        </p>
+        <table>
+            <thead>
+                <tr>
+                    <td>Valor</td>
+                    <td>Fi</td>
+                    <td>Xi</td>
+                    <td>FaC</td>
+                    <td>Fi(%)</td>
+                    <td>Xi.Fi</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of table">
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.fi }}</td>
+                    <td>{{ row.xi | number : '1.2-2' }}</td>
+                    <td>{{ row.fac }}</td>
+                    <td>{{ row.fiPercent | number : '1.2-2' }}%</td>
+                    <td>{{ row.xiFi | number : '1.2-2' }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>{{ entries.length }}</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>100.00%</td>
+                    <td>{{ xiFiSum | number : '1.2-2' }}</td>
+                </tr>
+                <tr>
+                    <td id="average" colspan="6">
+                        <b>Média →</b> {{ (xiFiSum / facSum) | number : '1.2-2' }}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </mat-card-content>
 </mat-card>

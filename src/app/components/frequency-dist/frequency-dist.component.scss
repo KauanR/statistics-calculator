@@ -1,3 +1,9 @@
+@mixin border() {
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+}
+
 mat-card {
     mat-card-header {
         mat-icon[mat-card-avatar] {
@@ -5,6 +11,45 @@ mat-card {
             height: 3rem;
             font-size: 3rem;
             color: var(--primary);
+        }
+    }
+
+    mat-card-content {
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-spacing: 0;
+            padding: 1rem 2rem;
+
+            td {
+                font-size: 1.17em;
+                padding: .75rem;
+            }
+
+            td#average {
+                font-weight: normal;
+                text-align: right;
+            }
+
+            thead td {
+                font-weight: bold;
+                @include border();
+            }
+
+            tfoot tr:first-child td {
+                @include border();
+            }
+
+            thead, tbody, tfoot {
+                td:first-child {
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                td:not(:first-child) {
+                    text-align: right;
+                }
+            }
         }
     }
 }
