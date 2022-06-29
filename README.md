@@ -1,5 +1,8 @@
 # Statistics Calculator
 
+## Live Demo
+https://statistics-calculator.herokuapp.com/
+
 ## Sobre
 Application made as a partial requirement to obtain a Bachelor's degree in the discipline of 'Computação Aplicada à Computação - URI'.
 <br>
