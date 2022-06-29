@@ -3,7 +3,7 @@
 ## Live Demo
 https://statistics-calculator.herokuapp.com/
 
-## Sobre
+## About
 Application made as a partial requirement to obtain a Bachelor's degree in the discipline of 'Computação Aplicada à Computação - URI'.
 <br>
 The technologies used in the development were:
