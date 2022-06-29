@@ -8,6 +8,14 @@
     div.title {
         font-size: 18px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+
+        mat-icon {
+            color: gray;
+        }
     }
 
     table {
